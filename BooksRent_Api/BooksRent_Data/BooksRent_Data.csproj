@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="Dapper" Version="2.0.35" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BooksRent_Constants\BooksRent_Constants.csproj" />
+    <ProjectReference Include="..\BooksRent_DatabaseEntities\BooksRent_DatabaseEntities.csproj" />
+    <ProjectReference Include="..\BooksRent_DatabaseEntities\BooksRent_DatabaseEntities.csproj" />
+  </ItemGroup>
+
+</Project>
