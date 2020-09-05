@@ -11,6 +11,8 @@ namespace BooksRent_Api.Modals
         public string Name { get; set; } 
         public string Author { get; set; }
         public int Price { get; set; }
+        public string Url { get; set; }
+
         public bool IsDelete { get; set; }
 
     }
