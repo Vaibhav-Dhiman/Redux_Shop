@@ -10,10 +10,10 @@ function App() {
   // cart setup
 
   return (
-    <main>
+    <div>
       <Navbar />
       <CartContainer cart={cartItems} />
-    </main>
+    </div>
   );
 }
 
