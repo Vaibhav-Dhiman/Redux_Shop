@@ -1,11 +1,19 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+// components
+import Navbar from "./components/Navbar";
+import CartContainer from "./components/CartContainer";
+// items
+import cartItems from "./cart-items";
+// redux stuff
 
 function App() {
+  // cart setup
+
   return (
-    <div >
-      hello world in React shoping cart
-    </div>
+    <main>
+      <Navbar />
+      <CartContainer cart={cartItems} />
+    </main>
   );
 }
 
