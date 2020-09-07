@@ -4,9 +4,8 @@ import Navbar from "./components/Navbar";
 import CartContainer from "./components/CartContainer";
 // items
 import cartItems from "./cart-items";
-import {INCREASE,DECREASE,REMOVE} from "./components/Actions";
 import reducer from "./components/Reducers";
-
+import {Provider} from "react-redux";
 // redux stuff
 
 // store -> single source of truth
@@ -17,22 +16,21 @@ import {createStore} from 'redux';
 
 // initial state value
 const initialStore = {
-  count: 0
+  cart:cartItems,
+  total:0,
+  amount:5
 };
 
 /// store creating
 const store = createStore(reducer,initialStore);
-store.dispatch({type: DECREASE});
-store.dispatch({type: INCREASE});
-console.log(store.getState());
 
 function App() {
   // cart setup
   return (
-    <div>
-      <Navbar cart={store.getState()} />
+    <Provider store={store}>
+      <Navbar />
       <CartContainer cart={cartItems} />
-    </div>
+    </Provider>
   );
 }
 
