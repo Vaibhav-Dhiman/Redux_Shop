@@ -17,7 +17,7 @@ import {createStore} from 'redux';
 // initial state value
 const initialStore = {
   cart:cartItems,
-  total:0,
+  total:16,
   amount:5
 };
 
@@ -29,7 +29,7 @@ function App() {
   return (
     <Provider store={store}>
       <Navbar />
-      <CartContainer cart={cartItems} />
+      <CartContainer store={store}/>
     </Provider>
   );
 }
