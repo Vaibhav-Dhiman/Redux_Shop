@@ -4,6 +4,9 @@ import Navbar from "./components/Navbar";
 import CartContainer from "./components/CartContainer";
 // items
 import cartItems from "./cart-items";
+import {INCREASE,DECREASE,REMOVE} from "./components/Actions";
+import reducer from "./components/Reducers";
+
 // redux stuff
 
 // store -> single source of truth
@@ -14,21 +17,13 @@ import {createStore} from 'redux';
 
 // initial state value
 const initialStore = {
-  count: 78
+  count: 0
 };
-
-// reducer here will dispatch action
-function reducer(state,action) {
-if(action.type === "DECREASE") {
-    // state.count = state.count -1;
-    return {count:state.count-1};
-}
-  return state;
-}
 
 /// store creating
 const store = createStore(reducer,initialStore);
-store.dispatch({type:"DECREASE"});
+store.dispatch({type: DECREASE});
+store.dispatch({type: INCREASE});
 console.log(store.getState());
 
 function App() {
