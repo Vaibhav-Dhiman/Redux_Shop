@@ -3,7 +3,6 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import CartContainer from "./components/CartContainer";
 // items
-import cartItems from "./cart-items";
 import reducer from "./components/Reducers";
 import {Provider} from "react-redux";
 // redux stuff
@@ -15,13 +14,13 @@ import {Provider} from "react-redux";
 import {createStore} from 'redux';
 
 // initial state value
-const initialStore = {
-  cart:cartItems,
-  total:16,
-  amount:5
-};
+// const initialStore = {
+//   cart:cartItems,
+//   total:16,
+//   amount:5
+// };
 
-const store = createStore(reducer,initialStore);
+const store = createStore(reducer);
 
 function App() {
   // cart setup
