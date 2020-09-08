@@ -21,7 +21,6 @@ const initialStore = {
   amount:5
 };
 
-/// store creating
 const store = createStore(reducer,initialStore);
 
 function App() {
